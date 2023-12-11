@@ -1,9 +1,8 @@
-FROM ubuntu:latest
+FROM alpine:latest
 LABEL maintainer="erikns"
 
-RUN apt-get update && apt-get install -y \
-    gcc-arm-none-eabi \
-    build-essential \
-    git \
+RUN apk add gcc-arm-none-eabi \
     cmake \
-    make
+    make \
+    git
+
